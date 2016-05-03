@@ -12,6 +12,7 @@
     <div class="nav-wrapper has-dropdown">
       <div class="nav-content">
         <div class="wrapper">
+          <img src="images/note-wrangler-hero.jpg" alt="" />
           <div class="nav-content-layout">
             <div class="nav-list">
 
@@ -29,6 +30,17 @@
           </div>
         </div>
       </div>
+    </div>
+
+    <div class="note-wrapper">
+      <a class="card-notes" ng-repeat="note in indexController.notes"></a>
+        <div class="card" title='{{note.title}}'>
+          <div ng-if="icon">
+            <i class="icon icon-card {{note.icon}}"></i>
+          </div>
+          <h2 class="h3">{{note.title}}</h2>
+        </div>
+      </a>
     </div>
 
     <div class="hero-wrapper">
